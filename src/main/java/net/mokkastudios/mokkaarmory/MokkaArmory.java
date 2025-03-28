@@ -17,7 +17,7 @@ import org.slf4j.Logger;
 public class MokkaArmory
 {
     public static final String MOD_ID = "mokka_armory";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public MokkaArmory(FMLJavaModLoadingContext context)
     {
