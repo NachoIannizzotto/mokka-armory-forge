@@ -1,6 +1,7 @@
-package net.mokkastudios.mokkaarmory;
+package net.mokkastudios.mokkasarmory;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -11,17 +12,23 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.mokkastudios.mokkasarmory.item.ModCreativeTabs;
+import net.mokkastudios.mokkasarmory.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(MokkaArmory.MOD_ID)
 public class MokkaArmory
 {
-    public static final String MOD_ID = "mokka_armory";
+    public static final String MOD_ID = "mokkas_armory";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public MokkaArmory(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -34,8 +41,10 @@ public class MokkaArmory
     {
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+
+        }
     }
 
     @SubscribeEvent
