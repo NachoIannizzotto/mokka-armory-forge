@@ -1,5 +1,13 @@
 {
   "creativetab.ingredients_tab": "Armory Ingredients",
 
-  "item.mokkas_armory.sapphire": "Sapphire"
+  "creativetab.armors_tab": "Armory Armors",
+
+
+
+  "item.mokkas_armory.sapphire": "Sapphire",
+  "item.mokkas_armory.copper_helmet": "Copper Helmet",
+  "item.mokkas_armory.copper_chestplate": "Copper Chestplate",
+  "item.mokkas_armory.copper_leggings": "Copper Leggings",
+  "item.mokkas_armory.copper_boots": "Copper Boots"
 }

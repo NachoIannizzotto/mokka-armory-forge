@@ -24,6 +24,19 @@ public class ModCreativeTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> ARMORS_TAB = CREATIVE_MODE_TABS.register("armors_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COPPER_HELMET.get()))
+                    .title(Component.translatable("creativetab.armors_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+
+                        pOutput.accept(ModItems.COPPER_HELMET.get());
+                        pOutput.accept(ModItems.COPPER_CHESTPLATE.get());
+                        pOutput.accept(ModItems.COPPER_LEGGINGS.get());
+                        pOutput.accept(ModItems.COPPER_BOOTS.get());
+
+                    })
+                    .build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }
