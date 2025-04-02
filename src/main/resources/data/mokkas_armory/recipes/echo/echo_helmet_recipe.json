@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_helmet"
+  },
+  "result": {
+    "item": "minecraft:golden_helmet"
+  },
+  "template": {
+    "item": "mokkas_armory:gold_netherite_template"
+  }
+}

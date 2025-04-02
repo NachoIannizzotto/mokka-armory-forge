@@ -9,5 +9,22 @@
   "item.mokkas_armory.copper_helmet": "Copper Helmet",
   "item.mokkas_armory.copper_chestplate": "Copper Chestplate",
   "item.mokkas_armory.copper_leggings": "Copper Leggings",
-  "item.mokkas_armory.copper_boots": "Copper Boots"
+  "item.mokkas_armory.copper_boots": "Copper Boots",
+
+  "item.mokkas_armory.copper_helmet": "Echo Helmet",
+  "item.mokkas_armory.copper_chestplate": "Echo Chestplate",
+  "item.mokkas_armory.copper_leggings": "Echo Leggings",
+  "item.mokkas_armory.copper_boots": "Echo Boots",
+
+  "upgrade.mokkas_armory.gilded_upgrade": "Gilded Upgrade",
+  "item.mokkas_armory.gold_netherite_template.applies": "Netherite Equipment",
+  "item.mokkas_armory.gold_netherite_template.ingredients": "Gold Ingot",
+  "item.mokkas_armory.armory_ingredients": "Add netherite armor",
+  "item.mokkas_armory.gold_netherite_template": "Add Gold Ingot",
+
+  "upgrade.mokkas_armory.echo_upgrade": "Echo Upgrade",
+  "item.mokkas_armory.echo_template.applies": "Netherite Equipment",
+  "item.mokkas_armory.echo_template.ingredients": "Echo Shard",
+  "item.mokkas_armory.echo_ingredients": "Add netherite armor",
+  "item.mokkas_armory.echo_template": "Add Echo Shard"
 }

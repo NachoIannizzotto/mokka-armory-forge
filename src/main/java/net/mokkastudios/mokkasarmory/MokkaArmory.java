@@ -1,6 +1,7 @@
 package net.mokkastudios.mokkasarmory;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -47,6 +48,10 @@ public class MokkaArmory
         }
     }
 
+    public static ResourceLocation rl(String path) {
+        return ResourceLocation.parse(MOD_ID + ":" + path);
+    }
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
@@ -58,6 +63,7 @@ public class MokkaArmory
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
         }
     }
 }

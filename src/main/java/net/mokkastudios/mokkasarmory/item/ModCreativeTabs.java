@@ -15,11 +15,12 @@ public class ModCreativeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MokkaArmory.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> INGREDIENTS_TAB = CREATIVE_MODE_TABS.register("ingredients_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GOLD_NETHERITE_TEMPLATE.get()))
                     .title(Component.translatable("creativetab.ingredients_tab"))
                     .displayItems((pParameters, pOutput) -> {
 
-                        pOutput.accept(ModItems.SAPPHIRE.get());
+                        pOutput.accept(ModItems.GOLD_NETHERITE_TEMPLATE.get());
+                        pOutput.accept(ModItems.ECHO_TEMPLATE.get());
 
                     })
                     .build());
@@ -33,6 +34,11 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.COPPER_CHESTPLATE.get());
                         pOutput.accept(ModItems.COPPER_LEGGINGS.get());
                         pOutput.accept(ModItems.COPPER_BOOTS.get());
+
+                        pOutput.accept(ModItems.ECHO_HELMET.get());
+                        pOutput.accept(ModItems.ECHO_CHESTPLATE.get());
+                        pOutput.accept(ModItems.ECHO_LEGGINGS.get());
+                        pOutput.accept(ModItems.ECHO_BOOTS.get());
 
                     })
                     .build());
