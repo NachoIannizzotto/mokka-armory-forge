@@ -60,6 +60,10 @@ minecraft {
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
     runs {
+
+        client {
+            arg "-mixin.config=mokkas_armory.mixin.json"
+        }
         // applies to all the run configs below
         configureEach {
             workingDirectory project.file('run')
@@ -131,6 +135,8 @@ dependencies {
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    implementation 'org.spongepowered:mixin:0.8.5'
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
@@ -206,4 +212,14 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+jar {
+    manifest {
+        attributes([
+                "TweakClass": "org.spongepowered.asm.launched.MixinTweaker",
+                "TweakOrder": 0,
+                "MixinConfigs": "mokkas_armory.mixins.json"
+        ])
+    }
 }

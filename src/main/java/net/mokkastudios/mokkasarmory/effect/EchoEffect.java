@@ -3,10 +3,12 @@ package net.mokkastudios.mokkasarmory.effect;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.*;
+import net.minecraft.world.entity.decoration.ArmorStand;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +22,7 @@ public class EchoEffect extends MobEffect {
     private static final UUID DAMAGE_MODIFIER_UUID = UUID.fromString("11111111-1111-1111-1111-111111111111");
     private static final int PARTICLE_DELAY_TICKS = 2;
     private final Map<UUID, Integer> particleTimers = new HashMap<>();
+    private final Map<UUID, Integer> soundTimers = new HashMap<>();
 
     public EchoEffect(MobEffectCategory mobEffectCategory, int color) {
         super(mobEffectCategory, color);
@@ -30,7 +33,7 @@ public class EchoEffect extends MobEffect {
         if (!entity.level().isClientSide()) {
             List<LivingEntity> nearbyMobs = entity.level().getEntitiesOfClass(
                     LivingEntity.class, entity.getBoundingBox().inflate(RANGE),
-                    e -> e != entity && e.isAlive()
+                    e -> e != entity && e.isAlive() && !(e instanceof ArmorStand)
             );
 
             int mobCount = Math.min(nearbyMobs.size(), MAX_MOBS);
@@ -41,6 +44,7 @@ public class EchoEffect extends MobEffect {
             applyAttributeModifier(entity, Attributes.ATTACK_DAMAGE, DAMAGE_MODIFIER_UUID, damageBonus);
 
             spawnEchoParticles(entity, mobCount);
+            playHeartbeatSound(entity, mobCount);
         }
         super.applyEffectTick(entity, amplifier);
     }
@@ -122,5 +126,32 @@ public class EchoEffect extends MobEffect {
                 );
             }
         }
+    }
+
+    private void playHeartbeatSound(LivingEntity entity, int mobCount) {
+        if (mobCount < 1) return;
+
+        UUID playerId = entity.getUUID();
+        int timer = soundTimers.getOrDefault(playerId, 0);
+
+        if (timer > 0) {
+            soundTimers.put(playerId, timer - 1);
+            return;
+        }
+
+        int heartbeatDelay = Math.max(10, 40 - (mobCount * 5));
+
+        soundTimers.put(playerId, heartbeatDelay);
+
+        float pitch = 0.5f + ((mobCount - 1) / 7.0f) * 1.5f;
+
+        entity.level().playSound(
+                null,
+                entity.getX(), entity.getY(), entity.getZ(),
+                SoundEvents.WARDEN_HEARTBEAT,
+                entity.getSoundSource(),
+                0.1f,
+                pitch
+        );
     }
 }

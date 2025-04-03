@@ -45,6 +45,20 @@ public class ModItems {
 
     ////
 
+    public static final RegistryObject<Item> GILDED_HELMET = ITEMS.register("gilded_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> GILDED_CHESTPLATE = ITEMS.register("gilded_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+
+    public static final RegistryObject<Item> GILDED_LEGGINGS = ITEMS.register("gilded_leggings",
+            () -> new ArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+    public static final RegistryObject<Item> GILDED_BOOTS = ITEMS.register("gilded_boots",
+            () -> new ArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    ////
+
     public static final RegistryObject<Item> GOLD_NETHERITE_TEMPLATE = ITEMS.register("gold_netherite_template",
             () -> new SmithingTemplateItem(
                     Component.translatable("item.mokkas_armory.gold_netherite_template.applies").withStyle(ChatFormatting.BLUE),

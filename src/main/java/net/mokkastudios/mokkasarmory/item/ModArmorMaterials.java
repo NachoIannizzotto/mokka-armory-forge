@@ -15,7 +15,10 @@ public enum ModArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.COPPER_INGOT)),
 
     ECHO("echo", 47, new int[]{4, 9, 7, 4}, 20,
-    SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0f, 0.2f, () -> Ingredient.of(Items.ECHO_SHARD));
+    SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0f, 0.2f, () -> Ingredient.of(Items.ECHO_SHARD)),
+
+    GILDED("gilded", 37, new int[]{3, 8, 6, 3}, 15,
+    SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
     private final String name;
 

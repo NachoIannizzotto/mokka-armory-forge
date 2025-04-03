@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.mokkastudios.mokkasarmory.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "PiglinAiMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "mokkas_armory.mixin-refmap.json"
+}

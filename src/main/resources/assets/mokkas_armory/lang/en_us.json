@@ -16,6 +16,11 @@
   "item.mokkas_armory.echo_leggings": "Echo Leggings",
   "item.mokkas_armory.echo_boots": "Echo Boots",
 
+  "item.mokkas_armory.gilded_helmet": "Gilded Netherite Helmet",
+  "item.mokkas_armory.gilded_chestplate": "Gilded Netherite Chestplate",
+  "item.mokkas_armory.gilded_leggings": "Gilded Netherite Leggings",
+  "item.mokkas_armory.gilded_boots": "Gilded Netherite Boots",
+
   "upgrade.mokkas_armory.gilded_upgrade": "Gilded Upgrade",
   "item.mokkas_armory.gold_netherite_template.applies": "Netherite Equipment",
   "item.mokkas_armory.gold_netherite_template.ingredients": "Gold Ingot",

@@ -40,6 +40,11 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.ECHO_LEGGINGS.get());
                         pOutput.accept(ModItems.ECHO_BOOTS.get());
 
+                        pOutput.accept(ModItems.GILDED_HELMET.get());
+                        pOutput.accept(ModItems.GILDED_CHESTPLATE.get());
+                        pOutput.accept(ModItems.GILDED_LEGGINGS.get());
+                        pOutput.accept(ModItems.GILDED_BOOTS.get());
+
                     })
                     .build());
 
