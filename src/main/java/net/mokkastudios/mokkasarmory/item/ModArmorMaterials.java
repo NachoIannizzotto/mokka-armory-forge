@@ -14,8 +14,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
     COPPER("copper", 13, new int[]{ 2, 4, 3, 1 }, 15,
             SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(Items.COPPER_INGOT)),
 
-    ECHO("echo", 47, new int[]{5, 7, 9, 4}, 20,
-    SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0f, 0.5f, () -> Ingredient.of(Items.ECHO_SHARD));
+    ECHO("echo", 47, new int[]{4, 9, 7, 4}, 20,
+    SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0f, 0.2f, () -> Ingredient.of(Items.ECHO_SHARD));
 
     private final String name;
 

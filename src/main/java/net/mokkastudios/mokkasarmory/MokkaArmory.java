@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.mokkastudios.mokkasarmory.effect.ModEffects;
 import net.mokkastudios.mokkasarmory.item.ModCreativeTabs;
 import net.mokkastudios.mokkasarmory.item.ModItems;
 import org.slf4j.Logger;
@@ -30,6 +31,8 @@ public class MokkaArmory
         ModCreativeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -63,7 +66,9 @@ public class MokkaArmory
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
         }
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
     }
 }

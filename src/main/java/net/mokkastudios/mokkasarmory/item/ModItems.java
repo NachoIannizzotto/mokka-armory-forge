@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.mokkastudios.mokkasarmory.MokkaArmory;
+import net.mokkastudios.mokkasarmory.item.custom.ModArmorItem;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class ModItems {
     ////
 
     public static final RegistryObject<Item> ECHO_HELMET = ITEMS.register("echo_helmet",
-            () -> new ArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> ECHO_CHESTPLATE = ITEMS.register("echo_chestplate",
             () -> new ArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.CHESTPLATE, new Item.Properties()));

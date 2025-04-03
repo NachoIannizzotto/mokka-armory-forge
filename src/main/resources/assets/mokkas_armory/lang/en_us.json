@@ -3,7 +3,7 @@
 
   "creativetab.armors_tab": "Armory Armors",
 
-
+  "effect.mokkas_armory.echo": "Soul Resonance",
 
   "item.mokkas_armory.sapphire": "Sapphire",
   "item.mokkas_armory.copper_helmet": "Copper Helmet",
@@ -11,10 +11,10 @@
   "item.mokkas_armory.copper_leggings": "Copper Leggings",
   "item.mokkas_armory.copper_boots": "Copper Boots",
 
-  "item.mokkas_armory.copper_helmet": "Echo Helmet",
-  "item.mokkas_armory.copper_chestplate": "Echo Chestplate",
-  "item.mokkas_armory.copper_leggings": "Echo Leggings",
-  "item.mokkas_armory.copper_boots": "Echo Boots",
+  "item.mokkas_armory.echo_helmet": "Echo Helmet",
+  "item.mokkas_armory.echo_chestplate": "Echo Chestplate",
+  "item.mokkas_armory.echo_leggings": "Echo Leggings",
+  "item.mokkas_armory.echo_boots": "Echo Boots",
 
   "upgrade.mokkas_armory.gilded_upgrade": "Gilded Upgrade",
   "item.mokkas_armory.gold_netherite_template.applies": "Netherite Equipment",
