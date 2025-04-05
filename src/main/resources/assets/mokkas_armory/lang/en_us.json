@@ -1,7 +1,9 @@
 {
-  "creativetab.ingredients_tab": "Armory Ingredients",
+  "creativetab.ingredients_tab": "Mokka's Miscellaneous",
 
-  "creativetab.armors_tab": "Armory Armors",
+  "creativetab.armors_tab": "Mokka's Armory",
+
+  "creativetab.weapons_tab": "Mokka's Weaponry",
 
   "effect.mokkas_armory.echo": "Soul Resonance",
 
@@ -15,6 +17,7 @@
   "item.mokkas_armory.echo_chestplate": "Echo Chestplate",
   "item.mokkas_armory.echo_leggings": "Echo Leggings",
   "item.mokkas_armory.echo_boots": "Echo Boots",
+  "item.mokkas_armory.echo_sickle": "Echo Sickle",
 
   "item.mokkas_armory.gilded_helmet": "Gilded Netherite Helmet",
   "item.mokkas_armory.gilded_chestplate": "Gilded Netherite Chestplate",

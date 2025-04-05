@@ -25,6 +25,16 @@ public class ModCreativeTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> WEAPONS_TAB = CREATIVE_MODE_TABS.register("weapons_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ECHO_SICKLE.get()))
+                    .title(Component.translatable("creativetab.weapons_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+
+                        pOutput.accept(ModItems.ECHO_SICKLE.get());
+
+                    })
+                    .build());
+
     public static final RegistryObject<CreativeModeTab> ARMORS_TAB = CREATIVE_MODE_TABS.register("armors_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COPPER_HELMET.get()))
                     .title(Component.translatable("creativetab.armors_tab"))

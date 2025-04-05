@@ -43,19 +43,22 @@ public class ModItems {
     public static final RegistryObject<Item> ECHO_BOOTS = ITEMS.register("echo_boots",
             () -> new ArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    public static final RegistryObject<Item> ECHO_SICKLE = ITEMS.register("echo_sickle",
+            () -> new SwordItem(ModToolTiers.ECHO, 4, -1.4F, new Item.Properties()));
+
     ////
 
     public static final RegistryObject<Item> GILDED_HELMET = ITEMS.register("gilded_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.HELMET, new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> GILDED_CHESTPLATE = ITEMS.register("gilded_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> GILDED_LEGGINGS = ITEMS.register("gilded_leggings",
-            () -> new ArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> GILDED_BOOTS = ITEMS.register("gilded_boots",
-            () -> new ArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.GILDED, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant()));
 
     ////
 
@@ -67,13 +70,13 @@ public class ModItems {
                     Component.translatable("item.mokkas_armory.armory_ingredients"),
                     Component.translatable("item.mokkas_armory.gold_netherite_template"),
                     List.of(
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "netherite_helmet"),
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "netherite_chestplate"),
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "netherite_leggings"),
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "netherite_boots")
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_helmet"),
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_chestplate"),
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_leggings"),
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_boots")
                     ),
                     List.of(
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "gold_ingot")
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_slot_ingot")
                     )
             )
     );
@@ -86,13 +89,13 @@ public class ModItems {
                     Component.translatable("item.mokkas_armory.echo_ingredients"),
                     Component.translatable("item.mokkas_armory.echo_template"),
                     List.of(
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "netherite_helmet"),
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "netherite_chestplate"),
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "netherite_leggings"),
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "netherite_boots")
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_helmet"),
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_chestplate"),
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_leggings"),
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_boots")
                     ),
                     List.of(
-                            ResourceLocation.fromNamespaceAndPath("minecraft", "echo_shard")
+                            ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_slot_ingot")
                     )
             )
     );

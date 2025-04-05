@@ -1,7 +1,11 @@
 package net.mokkastudios.mokkasarmory.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -11,23 +15,36 @@ import net.mokkastudios.mokkasarmory.effect.ModEffects;
 import net.mokkastudios.mokkasarmory.item.ModArmorMaterials;
 
 import java.util.Map;
+import java.util.Set;
 
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmorMaterials.ECHO, new MobEffectInstance(ModEffects.ECHO.get(), 80, 0,
+                            false,false,true))
+                    .put(ModArmorMaterials.GILDED, new MobEffectInstance(MobEffects.DIG_SPEED, 80, 0,
                             false,false,true)).build();
+
+    private static final Set<ArmorMaterial> PIGLIN_NEUTRAL_MATERIALS = Set.of(
+            ModArmorMaterials.GILDED);
+
     public ModArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
 
     @Override
-    public void onInventoryTick(ItemStack stack, Level world, Player player, int slotIndex, int selectedIndex) {
-        if(!world.isClientSide()) {
-            if(hasFullSuitOfArmorOn(player)) {
-                evaluateArmorEffects(player);
+    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+        if(!pLevel.isClientSide()) {
+            if(pEntity instanceof Player) {
+                Player player = (Player)pEntity;
+
+                if(hasFullSuitOfArmorOn(player)) {
+                    evaluateArmorEffects(player);
+                }
             }
         }
+
+        super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
     }
 
     private void evaluateArmorEffects(Player player) {
@@ -74,5 +91,19 @@ public class ModArmorItem extends ArmorItem {
 
         return helmet.getMaterial() == material && chestplate.getMaterial() == material
                 && leggings.getMaterial() == material && boots.getMaterial() == material;
+    }
+
+    @Override
+    public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
+        if (wearer instanceof Player player) {
+            for (ItemStack armorStack : player.getInventory().armor) {
+                if (armorStack.getItem() instanceof ArmorItem armorItem) {
+                    if (PIGLIN_NEUTRAL_MATERIALS.contains(armorItem.getMaterial())) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 }
