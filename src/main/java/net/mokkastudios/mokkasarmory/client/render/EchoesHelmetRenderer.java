@@ -14,16 +14,16 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.mokkastudios.mokkasarmory.MokkaArmory;
-import net.mokkastudios.mokkasarmory.client.model.EchoHelmet;
+import net.mokkastudios.mokkasarmory.client.model.EchoesHelmet;
 import net.mokkastudios.mokkasarmory.item.ModItems;
 
-public class EchoHelmetRenderer<E extends LivingEntity, M extends HumanoidModel<E>> extends RenderLayer<E, M> {
-    public static final ModelLayerLocation MODEL = new ModelLayerLocation(MokkaArmory.rl("echo"), "3");
-    private static final ResourceLocation TEXTURE = MokkaArmory.rl("textures/models/armor/echo_layer_3.png");
+public class EchoesHelmetRenderer<E extends LivingEntity, M extends HumanoidModel<E>> extends RenderLayer<E, M> {
+    public static final ModelLayerLocation MODEL = new ModelLayerLocation(MokkaArmory.rl("echoes"), "3");
+    private static final ResourceLocation TEXTURE = MokkaArmory.rl("textures/models/armor/echoes_layer_3.png");
     private final EntityModelSet model;
 
 
-    public EchoHelmetRenderer(RenderLayerParent<E, M> renderer, EntityModelSet modelSet) {
+    public EchoesHelmetRenderer(RenderLayerParent<E, M> renderer, EntityModelSet modelSet) {
         super(renderer);
         this.model = modelSet;
     }
@@ -32,12 +32,12 @@ public class EchoHelmetRenderer<E extends LivingEntity, M extends HumanoidModel<
     public void render(PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight, E pLivingEntity, float pLimbSwing, float pLimbSwingAmount,
                        float pPartialTick, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
         ItemStack stack = pLivingEntity.getItemBySlot(EquipmentSlot.HEAD);
-        if(stack.is(ModItems.ECHO_HELMET.get())) {
+        if(stack.is(ModItems.ECHOES_HELMET.get())) {
             pPoseStack.pushPose();
 
             pPoseStack.scale(1, 1, 1);
             this.getParentModel().getHead().translateAndRotate(pPoseStack);
-            EchoHelmet<E> helmetModel = new EchoHelmet<>(this.model.bakeLayer(MODEL));
+            EchoesHelmet<E> helmetModel = new EchoesHelmet<>(this.model.bakeLayer(MODEL));
             helmetModel.renderToBuffer(pPoseStack, pBuffer.getBuffer(RenderType.armorCutoutNoCull(TEXTURE)), pPackedLight,
                     OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 

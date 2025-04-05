@@ -31,20 +31,20 @@ public class ModItems {
 
     ////
 
-    public static final RegistryObject<Item> ECHO_HELMET = ITEMS.register("echo_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> ECHOES_HELMET = ITEMS.register("echoes_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.ECHOES, ArmorItem.Type.HELMET, new Item.Properties()));
 
-    public static final RegistryObject<Item> ECHO_CHESTPLATE = ITEMS.register("echo_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> ECHOES_CHESTPLATE = ITEMS.register("echoes_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ECHOES, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
-    public static final RegistryObject<Item> ECHO_LEGGINGS = ITEMS.register("echo_leggings",
-            () -> new ArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> ECHOES_LEGGINGS = ITEMS.register("echoes_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ECHOES, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
-    public static final RegistryObject<Item> ECHO_BOOTS = ITEMS.register("echo_boots",
-            () -> new ArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> ECHOES_BOOTS = ITEMS.register("echoes_boots",
+            () -> new ArmorItem(ModArmorMaterials.ECHOES, ArmorItem.Type.BOOTS, new Item.Properties()));
 
-    public static final RegistryObject<Item> ECHO_SICKLE = ITEMS.register("echo_sickle",
-            () -> new SwordItem(ModToolTiers.ECHO, 4, -1.4F, new Item.Properties()));
+    public static final RegistryObject<Item> ECHOES_SICKLE = ITEMS.register("echoes_sickle",
+            () -> new SwordItem(ModToolTiers.ECHOES, 4, -1.4F, new Item.Properties()));
 
     ////
 
@@ -81,13 +81,13 @@ public class ModItems {
             )
     );
 
-    public static final RegistryObject<Item> ECHO_TEMPLATE = ITEMS.register("echo_template",
+    public static final RegistryObject<Item> ECHOES_TEMPLATE = ITEMS.register("echoes_template",
             () -> new SmithingTemplateItem(
-                    Component.translatable("item.mokkas_armory.echo_template.applies").withStyle(ChatFormatting.BLUE),
-                    Component.translatable("item.mokkas_armory.echo_template.ingredients").withStyle(ChatFormatting.BLUE),
-                    Component.translatable("upgrade.mokkas_armory.echo_upgrade").withStyle(ChatFormatting.GRAY),
-                    Component.translatable("item.mokkas_armory.echo_ingredients"),
-                    Component.translatable("item.mokkas_armory.echo_template"),
+                    Component.translatable("item.mokkas_armory.echoes_template.applies").withStyle(ChatFormatting.BLUE),
+                    Component.translatable("item.mokkas_armory.echoes_template.ingredients").withStyle(ChatFormatting.BLUE),
+                    Component.translatable("upgrade.mokkas_armory.echoes_upgrade").withStyle(ChatFormatting.GRAY),
+                    Component.translatable("item.mokkas_armory.echoes_ingredients"),
+                    Component.translatable("item.mokkas_armory.echoes_template"),
                     List.of(
                             ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_helmet"),
                             ResourceLocation.fromNamespaceAndPath("minecraft", "item/empty_armor_slot_chestplate"),

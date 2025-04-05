@@ -1,10 +1,10 @@
 package net.mokkastudios.mokkasarmory.item;
 
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -20,17 +20,17 @@ public class ModCreativeTabs {
                     .displayItems((pParameters, pOutput) -> {
 
                         pOutput.accept(ModItems.GOLD_NETHERITE_TEMPLATE.get());
-                        pOutput.accept(ModItems.ECHO_TEMPLATE.get());
+                        pOutput.accept(ModItems.ECHOES_TEMPLATE.get());
 
                     })
                     .build());
 
     public static final RegistryObject<CreativeModeTab> WEAPONS_TAB = CREATIVE_MODE_TABS.register("weapons_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ECHO_SICKLE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ECHOES_SICKLE.get()))
                     .title(Component.translatable("creativetab.weapons_tab"))
                     .displayItems((pParameters, pOutput) -> {
 
-                        pOutput.accept(ModItems.ECHO_SICKLE.get());
+                        pOutput.accept(ModItems.ECHOES_SICKLE.get());
 
                     })
                     .build());
@@ -45,10 +45,10 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.COPPER_LEGGINGS.get());
                         pOutput.accept(ModItems.COPPER_BOOTS.get());
 
-                        pOutput.accept(ModItems.ECHO_HELMET.get());
-                        pOutput.accept(ModItems.ECHO_CHESTPLATE.get());
-                        pOutput.accept(ModItems.ECHO_LEGGINGS.get());
-                        pOutput.accept(ModItems.ECHO_BOOTS.get());
+                        pOutput.accept(ModItems.ECHOES_HELMET.get());
+                        pOutput.accept(ModItems.ECHOES_CHESTPLATE.get());
+                        pOutput.accept(ModItems.ECHOES_LEGGINGS.get());
+                        pOutput.accept(ModItems.ECHOES_BOOTS.get());
 
                         pOutput.accept(ModItems.GILDED_HELMET.get());
                         pOutput.accept(ModItems.GILDED_CHESTPLATE.get());

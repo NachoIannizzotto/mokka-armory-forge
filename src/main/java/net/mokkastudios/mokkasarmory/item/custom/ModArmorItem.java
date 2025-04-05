@@ -1,7 +1,6 @@
 package net.mokkastudios.mokkasarmory.item.custom;
 
 import com.google.common.collect.ImmutableMap;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -20,7 +19,7 @@ import java.util.Set;
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.ECHO, new MobEffectInstance(ModEffects.ECHO.get(), 80, 0,
+                    .put(ModArmorMaterials.ECHOES, new MobEffectInstance(ModEffects.ECHOES.get(), 80, 0,
                             false,false,true))
                     .put(ModArmorMaterials.GILDED, new MobEffectInstance(MobEffects.DIG_SPEED, 80, 0,
                             false,false,true)).build();

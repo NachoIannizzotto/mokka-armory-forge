@@ -10,10 +10,10 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 
-public class EchoHelmet<E extends LivingEntity> extends EntityModel<E> implements HeadedModel {
+public class EchoesHelmet<E extends LivingEntity> extends EntityModel<E> implements HeadedModel {
     private final ModelPart head;
 
-    public EchoHelmet(ModelPart head) {
+    public EchoesHelmet(ModelPart head) {
         this.head = head;
     }
 

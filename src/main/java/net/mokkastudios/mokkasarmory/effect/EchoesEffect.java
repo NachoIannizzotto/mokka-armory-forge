@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class EchoEffect extends MobEffect {
+public class EchoesEffect extends MobEffect {
     private static final double DAMAGE_BOOST_PER_MOB = 0.1;
     private static final int RANGE = 4;
     private static final int MAX_MOBS = 8;
@@ -24,7 +24,7 @@ public class EchoEffect extends MobEffect {
     private final Map<UUID, Integer> particleTimers = new HashMap<>();
     private final Map<UUID, Integer> soundTimers = new HashMap<>();
 
-    public EchoEffect(MobEffectCategory mobEffectCategory, int color) {
+    public EchoesEffect(MobEffectCategory mobEffectCategory, int color) {
         super(mobEffectCategory, color);
     }
 

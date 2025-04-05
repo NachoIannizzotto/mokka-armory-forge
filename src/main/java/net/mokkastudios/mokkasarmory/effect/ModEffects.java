@@ -12,8 +12,8 @@ public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS
             = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, MokkaArmory.MOD_ID);
 
-    public static final RegistryObject<MobEffect> ECHO =
-            MOB_EFFECTS.register("echo", () -> new EchoEffect(MobEffectCategory.BENEFICIAL, 0x1D1D1D));
+    public static final RegistryObject<MobEffect> ECHOES =
+            MOB_EFFECTS.register("echo", () -> new EchoesEffect(MobEffectCategory.BENEFICIAL, 0x1D1D1D));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);
