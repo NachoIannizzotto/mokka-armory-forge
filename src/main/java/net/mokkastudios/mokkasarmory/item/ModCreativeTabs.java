@@ -58,6 +58,16 @@ public class ModCreativeTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> SPAWN_EGG_TAB = CREATIVE_MODE_TABS.register("spawn_egg_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COREBOUND_GUARDIAN_SPAWN_EGG.get()))
+                    .title(Component.translatable("creativetab.spawn_egg_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+
+                        pOutput.accept(ModItems.COREBOUND_GUARDIAN_SPAWN_EGG.get());
+
+                    })
+                    .build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }

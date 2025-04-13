@@ -1,6 +1,7 @@
 package net.mokkastudios.mokkasarmory;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,6 +15,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.mokkastudios.mokkasarmory.effect.ModEffects;
+import net.mokkastudios.mokkasarmory.entity.ModEntities;
+import net.mokkastudios.mokkasarmory.entity.client.Corebound_GuardianRenderer;
 import net.mokkastudios.mokkasarmory.item.ModCreativeTabs;
 import net.mokkastudios.mokkasarmory.item.ModItems;
 import org.slf4j.Logger;
@@ -33,6 +36,8 @@ public class MokkaArmory
         ModItems.register(modEventBus);
 
         ModEffects.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -66,6 +71,7 @@ public class MokkaArmory
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.COREBOUND_GUARDIAN.get(), Corebound_GuardianRenderer::new);
         }
     }
 

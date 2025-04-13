@@ -5,7 +5,13 @@
 
   "creativetab.weapons_tab": "Mokka's Weaponry",
 
+  "creativetab.spawn_egg_tab": "Mokka's Spawn Eggs",
+
+  "entity.mokkas_armory.corebound_guardian": "Corebound Guardian",
+
   "effect.mokkas_armory.echo": "Soul Resonance",
+
+  "item.mokkas_armory.corebound_guardian_spawn_egg": "Corebound Guardian Spawn Egg",
 
   "item.mokkas_armory.sapphire": "Sapphire",
   "item.mokkas_armory.copper_helmet": "Copper Helmet",
